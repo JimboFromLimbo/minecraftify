@@ -1,0 +1,11 @@
+img.mc-pending {
+  filter: saturate(0.4) blur(2px);
+  animation: mc-pulse 1.2s steps(4) infinite;
+}
+@keyframes mc-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
+}
+img.mc-done {
+  image-rendering: auto;
+}
