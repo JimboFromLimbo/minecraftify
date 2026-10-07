@@ -1,0 +1,4 @@
+.env
+extension/config.json
+node_modules/
+bench-out/

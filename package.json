@@ -1,0 +1,11 @@
+{
+  "name": "minecraftify",
+  "version": "1.0.0",
+  "description": "Chrome extension that replaces real estate listing photos with AI Minecraft versions",
+  "scripts": {
+    "env": "node scripts/env.js",
+    "bench": "node scripts/bench.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
