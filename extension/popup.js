@@ -42,13 +42,7 @@ $("save").addEventListener("click", () => {
 $("clear").addEventListener("click", () => {
   chrome.runtime.sendMessage({ type: "clearCache" }, (r) => {
     flash(`Removed ${r?.removed ?? 0}`);
-    // Blank fields fall back to .env / built-in defaults; show that as a placeholder.
-chrome.runtime.sendMessage({ type: "envInfo" }, (env) => {
-  if (env?.hasKey) $("apiKey").placeholder = "Using key from .env";
-  $("model").placeholder = env?.model || "";
-});
-
-refreshInfo();
+    refreshInfo();
   });
 });
 
