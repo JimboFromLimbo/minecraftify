@@ -2,6 +2,15 @@
 
 Chrome extension that replaces real estate listing photos with AI-generated Minecraft versions. Photos are re-rendered through an [OpenRouter](https://openrouter.ai) image model, cached locally, and swapped in place on the page.
 
+## Why?
+Its funny, and Jelly said it would be funny. 
+
+## Example
+
+| **Before**                     | **After**                      |
+|-------------------------------|-------------------------------|
+| ![Before](/docs/before.png)   | ![After](/docs/after.png)     |
+
 ## Supported sites
 
 Zillow, Redfin (.com / .ca), Realtor.com, Realtor.ca, Trulia, Homes.com, Compass, Apartments.com, Rightmove, Zoopla, OnTheMarket, realestate.com.au, Domain, Idealista, Airbnb.
