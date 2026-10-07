@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  body { width: 320px; margin: 0; padding: 14px; font: 13px/1.4 -apple-system, system-ui, sans-serif; background: #2b2b2b; color: #eee; }
+  h1 { font-size: 16px; margin: 0 0 12px; display: flex; align-items: center; gap: 8px; }
+  h1 img { width: 24px; height: 24px; image-rendering: pixelated; }
+  label { display: block; margin: 10px 0 4px; color: #bbb; font-size: 12px; }
+  input[type=text], input[type=password], input[type=number], textarea {
+    width: 100%; box-sizing: border-box; padding: 6px 8px; background: #1a1a1a; color: #eee;
+    border: 2px solid #555; font: inherit; }
+  textarea { height: 90px; resize: vertical; font-size: 11px; }
+  .row { display: flex; align-items: center; justify-content: space-between; }
+  .toggle { display: flex; align-items: center; gap: 8px; font-weight: 600; }
+  button { background: #5a8f29; color: #fff; border: 2px solid #3b5e1a; padding: 6px 12px; font: inherit; cursor: pointer; }
+  button.secondary { background: #555; border-color: #333; }
+  .actions { display: flex; gap: 8px; margin-top: 12px; }
+  .muted { color: #999; font-size: 11px; margin-top: 10px; }
+  a { color: #8fd14f; }
+  details { margin-top: 8px; }
+  summary { cursor: pointer; color: #bbb; }
+</style>
+</head>
+<body>
+  <h1><img src="icons/48.png" alt="">Minecraftify</h1>
+
+  <div class="row">
+    <span class="toggle"><input type="checkbox" id="enabled"> <label for="enabled" style="margin:0;color:#eee">Enabled</label></span>
+    <span id="status" class="muted" style="margin:0"></span>
+  </div>
+
+  <label for="apiKey">OpenRouter API key (<a href="https://openrouter.ai/keys" target="_blank">get one</a>)</label>
+  <input type="password" id="apiKey" placeholder="sk-or-...">
+
+  <details>
+    <summary>Advanced</summary>
+    <label for="model">Model</label>
+    <input type="text" id="model">
+    <label for="concurrency">Parallel requests</label>
+    <input type="number" id="concurrency" min="1" max="10">
+    <label for="prefetchLimit">Pre-generate off-screen photos per page (0 = off)</label>
+    <input type="number" id="prefetchLimit" min="0" max="200">
+    <label for="prompt">Prompt</label>
+    <textarea id="prompt"></textarea>
+  </details>
+
+  <div class="actions">
+    <button id="save">Save</button>
+    <button id="clear" class="secondary">Clear cache</button>
+  </div>
+
+  <div id="info" class="muted"></div>
+  <script src="popup.js"></script>
+</body>
+</html>
